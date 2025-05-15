@@ -60,7 +60,7 @@ class Program
             .Select(p => int.TryParse(p, out int page) ? page : 0)
             .Where(p => p > 0);
         
-        index.AddEntry(input[0], pages); // Ошибка 1: Отсутствует проверка на null для input[0]
+        index.AddEntry(input[0], pages);
     }
 
     static void RemoveEntry(SubjectIndex index)

@@ -34,7 +34,7 @@ public class SubjectIndex
 
     public void SaveToFile(string path)
     {
-        using var writer = new StreamWriter(path); // Ошибка 2: Отсутствует проверка на null или пустую строку для path
+        using var writer = new StreamWriter(path);
         foreach (var entry in _index)
         {
             writer.WriteLine($"{entry.Key}:{string.Join(",", entry.Value)}");
